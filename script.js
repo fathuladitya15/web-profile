@@ -85,3 +85,44 @@ document.addEventListener('DOMContentLoaded', function() {
         typeWriter();
     }
 });
+
+$("#kontakForm").submit(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        url :url_send,
+        type: "POST",
+        data: $(this).serialize(),
+        beforeSend: function() {
+            Swal.fire({
+                title: "Please Wait ... !",
+                html: "Message is being sent <b></b> ",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                },
+            });
+        },success: function(res) {
+             Swal.fire({
+                icon: 'success',
+                title: 'Sent!',
+                text: 'Your message has been sent successfully!',
+                timer: 3000,
+                showConfirmButton: false,
+                timerProgressBar: true
+                
+            });
+            $('#kontakForm')[0].reset();
+        },error : function(xhr) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Failed!',
+                text:'There was a problem sending your message.',
+                timer: 3000,
+                showConfirmButton: false,
+                timerProgressBar: true
+            });
+        }
+    })
+})
