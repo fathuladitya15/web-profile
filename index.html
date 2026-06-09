@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="asset/image/MFALogo.png" type="image/png">
 </head>
@@ -21,11 +23,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tentang">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#keahlian">Skils</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyek">Project</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tech-stack">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyek">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -36,9 +58,40 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <h1 class="display-4 animate__animated animate__fadeInLeft">Muhammad Fathul Aditya</h1>
-                    <p class="lead animate__animated animate__fadeInLeft animate__delay-1s">
-                        FullStack Developer | Crafting fullstack solutions with precision.
+                    <h3 class="typing-text text-info"></h3>
+                    <p class="lead mt-4">
+                        Fullstack Developer with 5+ years of experience building enterprise applications,
+                        HRM systems, RESTful APIs, cloud infrastructure, and business automation solutions.
                     </p>
+                    
+                    <div class="mt-4">
+                        <a href="asset/pdf/CV_M_FATHUL_ADITYA.pdf"
+                           class="btn btn-primary btn-lg me-2">
+                           <i class="fas fa-download"></i> Download CV
+                        </a>
+                    
+                        <a href="#contact"
+                           class="btn btn-outline-light btn-lg">
+                           <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                    </div>
+                    
+                    <div class="row mt-5 text-center">
+                        <div class="col-4">
+                            <h2 class="text-info">5+</h2>
+                            <p>Years Experience</p>
+                        </div>
+
+                        <div class="col-4">
+                            <h2 class="text-info">10+</h2>
+                            <p>Completed Projects</p>
+                        </div>
+                        
+                        <div class="col-4">
+                            <h2 class="text-info">15+</h2>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
                     <div class="social-links animate__animated animate__fadeInUp animate__delay-2s">
                         <a href="https://github.com/fathuladitya15" class="btn btn-outline-light me-2"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/muhamad-fathul-aditya-9bab62152/" class="btn btn-outline-light me-2"><i class="fab fa-linkedin"></i></a>
@@ -53,76 +106,332 @@
         <div class="hero-overlay"></div>
     </section>
 
-    <section id="tentang" class="py-5">
+    <section id="tentang" class="py-5" data-aos="fade-up">
         <div class="container">
             <h2 class="text-center mb-4">About Me</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <p>
-                        I am a skilled web development programmer with 4 years of experience in crafting dynamic, efficient, 
-                        and user-centered websites and applications. My expertise spans full-stack development, focusing on 
-                        delivering solutions that not only meet clients' expectations but also adhere to best practices in 
-                        design, performance, and scalability. I am passionate about staying current with technological advancements, 
-                        particularly in areas like data analysis, which I integrate to enhance the digital solutions I develop. 
-                        Dedicated, detail-oriented, and innovative, I bring a professional and solution-driven approach to each project.
+                        I am a Fullstack Developer with over 5 years of experience building web-based and enterprise applications. 
+                        My expertise includes developing Human Resource Management (HRM) systems, payroll and attendance platforms, 
+                        RESTful APIs, and cloud-based solutions using Laravel, Vue.js, MySQL, and AWS.
+                        Throughout my career, I have been involved in the full software development lifecycle, from system analysis 
+                        and database design to deployment and maintenance. I have contributed to various business-critical applications, 
+                        including Smart HRM, E-RUPS, payroll management systems, attendance tracking platforms, and mobile application backends.
+                        In addition to web development, I have experience integrating hardware devices with software solutions, 
+                        including Bluetooth-enabled digital weighing systems using Python for real-time data processing and web integration. 
+                        I am passionate about building scalable, reliable, and user-focused applications that solve real business challenges.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="keahlian" class="bg-light py-5">
+    <section id="tech-stack" class="py-5" data-aos="fade-up">
+
         <div class="container">
-            <h2 class="text-center mb-4">Skils</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-code mb-3"></i>
-                    <h4>Frontend</h4>
-                    <p>
-                        HTML5, CSS3, JavaScript, Bootstrap, Vue.js, jQuery, AJAX
-                    </p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-server mb-3"></i>
-                    <h4>Backend</h4>
-                    <p>
-                        PHP (Laravel, CodeIgniter), RESTful API Development, Authentication & Authorization (JWT, Laravel Sanctum),
-                        Python, MVC Architecture
-                    </p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-database mb-3"></i>
-                    <h4>Database Management</h4>
-                    <p>MySql, Sql Server</p>
+
+            <h2 class="text-center mb-5">
+                Skills & Technologies
+            </h2>
+
+            <div class="swiper skillSwiper">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-fire"></i>
+                            <span>CodeIgniter</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-vuejs"></i>
+                            <span>VueJS</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-server"></i>
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fab fa-gitlab"></i>
+                            <span>GitLab</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-cloud"></i>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-server"></i>
+                            <span>VPS Setup</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-terminal"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-rocket"></i>
+                            <span>Deployment</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-code-branch"></i>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-plug"></i>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Postman</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>JWT Auth</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-key"></i>
+                            <span>Sanctum</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-bluetooth"></i>
+                            <span>Bluetooth Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="skill-card">
+                            <i class="fas fa-microchip"></i>
+                            <span>Hardware Integration</span>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="col-md-6 text-center">
-                    <!-- <i class="fas fa-tools mb-3"></i> -->
-                     <i class="fa-solid fa-code-compare"></i>
-                    <h4>Version Control & Deployment</h4>
-                    <p>Git (GitHub, GitLab), CI/CD using GitHub Actions, Deployment via cPanel, VPS, or AWS (EC2, S3)</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="experience" class="py-5"  data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                Career Journey
+            </h2>
+
+            <div class="career-timeline">
+                <div class="career-card" data-aos="fade-right">
+                    <span class="year">
+                        2022 - Present
+                    </span>
+                    <h4>Fullstack Developer</h4>
+                    <p class="company">
+                        PT Proven Force Indonesia
+                    </p>
+                    <p>
+                       Developed and maintained enterprise applications including HRM systems,
+                       payroll management, attendance tracking,
+                       RESTful APIs, and cloud-based deployments.
+                    </p>
+                    <div class="tech-badge">
+                        <span>Laravel</span>
+                        <span>VueJS</span>
+                        <span>REST API</span>
+                        <span>Linux</span>
+                        <span>Cloud</span>
+                    </div>
+                    <div class="achievement-grid">
+                        <span>Smart HRM</span>
+                        <span>Payroll Management</span>
+                        <span>Attendance System</span>
+                        <span>REST API</span>
+                        <span>Mobile Backend</span>
+                        <span>VPS Deployment</span>
+                        <span>SQL Optimization</span>
+                        <span>Hardware Integration</span>
+                        <span>Bluetooth Devices</span>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <i class="fas fa-tools mb-3"></i>
-                    <h4>Tools & Other Skills</h4>
-                    <p>Postman (API Testing), Third-party integrations, Visual Studio Code, Git Bash, Composer</p>
+                <div class="career-card" data-aos="fade-left">
+                    <span class="year">
+                        2021 - 2022
+                    </span>
+                    <h4>Web Developer</h4>
+                    <p class="company">
+                        PT Bima Registra
+                    </p>
+                    <p>
+                        Developed internal business applications,
+                        reporting dashboards, digital shareholder meeting platforms, and database-driven systems
+                        to support company operations.
+                    </p>
+                    <div class="tech-badge">
+                        <span>CodeIgniter</span>
+                        <span>MySQL</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="achievement-grid">
+                        <span>E-RUPS</span>
+                    </div>
+                </div>
+
+                <div class="career-card" data-aos="fade-right">
+                    <span class="year">
+                        2020 - 2021
+                    </span>
+                    <h4>Programmer</h4>
+                    <p class="company">
+                        Windian Nugraha
+                    </p>
+                    <p>
+                         Developed and maintained web-based examination systems,
+                         including user management, question banks,
+                         scoring modules, and reporting features.
+                    </p>
+
+                    <div class="tech-badge">
+                        <span>PHP</span>
+                        <span>mySQL </span>
+                        <span>Codeigniter </span>
+                    </div>
+                    <div class="achievement-grid">
+                        <span>Ujian Online - SMK Windian Nugraha</span>
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
 
-    <section id="proyek" class="py-5">
+    <section id="proyek" class="py-5" data-aos="zoom-in">
         <div class="container">
             <h2 class="text-center mb-4">Latest Project</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="asset/image/smarthrm.png" class="card-img-top" alt="Proyek 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Smart HRM</h5>
-                            <p class="card-text">A mobile HR application (Android & iOS) designed to simplify Human Resource (HR) processes in a company.</p>
-                        </div>
-                    </div>
+                   <div class="card project-card h-100 shadow">
+                       <img src="asset/image/smarthrm.png"
+                            class="card-img-top"
+                            alt="SmartHRM">
+                   
+                       <div class="card-body">
+                   
+                           <h5 class="card-title">
+                               Smart HRM
+                           </h5>
+                   
+                           <p class="card-text">
+                               Mobile HR Platform for Attendance,
+                               Payroll, Leave Management and Employee Monitoring.
+                           </p>
+                   
+                           <div class="mb-3">
+                   
+                               <span class="badge bg-primary">
+                                   Laravel
+                               </span>
+                   
+                               <span class="badge bg-success">
+                                   API
+                               </span>
+                   
+                               <span class="badge bg-dark">
+                                   Android
+                               </span>
+                   
+                           </div>
+                   
+                       </div>
+                   
+                   </div>
+
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
@@ -147,7 +456,7 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-dark text-white py-5">
+    <section id="contact" class="bg-dark text-white py-5" data-aos="fade-up">
         <div class="container">
             <h2 class="text-center mb-4">Contact Me</h2>
             <div class="row">
@@ -182,10 +491,15 @@
             <img src="https://visitor-badge.laobi.icu/badge?page_id=fathuladitya15.web-profile" alt="visitor badge">
         </p>
     </footer>
-
+    <button class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var url_send = "https://fathuladitya15.github.io/web-profile/send_email.php";
     </script>
@@ -199,5 +513,7 @@
           
             gtag('config', 'G-XNZ7F9VT7P');
         </script>
+
+    
 </body>
 </html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fathul - Full Stack Developer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+body{background:#0b1120}
+.gradient-text{
+background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+</style>
+</head>
+<body data-theme="night">
+
+<nav class="navbar bg-base-100/70 backdrop-blur sticky top-0 z-50 border-b border-base-300">
+<div class="container mx-auto px-4">
+<div class="flex-1">
+<a class="text-2xl font-bold">Fathul.dev</a>
+</div>
+<div class="hidden md:flex gap-6">
+<a href="#about">Tentang</a>
+<a href="#services">Layanan</a>
+<a href="#projects">Project</a>
+<a href="#contact">Kontak</a>
+</div>
+</div>
+</nav>
+
+<section class="hero min-h-[90vh]">
+<div class="hero-content text-center max-w-6xl">
+<div>
+<div class="badge badge-primary mb-5">Laravel • PHP • MySQL • REST API</div>
+<h1 class="text-5xl md:text-7xl font-black leading-tight">
+Membangun <span class="gradient-text">Sistem Bisnis</span><br>
+yang Efisien dan Mudah Digunakan
+</h1>
+<p class="py-8 text-lg max-w-3xl mx-auto text-base-content/70">
+Saya membantu perusahaan mengembangkan HRIS, Payroll, Attendance, ERP,
+Dashboard Monitoring dan aplikasi web custom yang scalable.
+</p>
+
+<div class="flex flex-wrap justify-center gap-4">
+<button class="btn btn-primary">Lihat Portfolio</button>
+<button class="btn btn-outline">Download CV</button>
+</div>
+
+<div class="stats stats-vertical lg:stats-horizontal shadow mt-12">
+<div class="stat">
+<div class="stat-value text-primary">20+</div>
+<div class="stat-title">Project</div>
+</div>
+<div class="stat">
+<div class="stat-value">5+</div>
+<div class="stat-title">Tahun Belajar</div>
+</div>
+<div class="stat">
+<div class="stat-value">100K+</div>
+<div class="stat-title">Data Diproses</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="container mx-auto px-6 py-20" id="about">
+<div class="grid lg:grid-cols-2 gap-10">
+<div data-aos="fade-right">
+<h2 class="text-4xl font-bold mb-6">Tentang Saya</h2>
+<p class="leading-8 text-base-content/70">
+Saya adalah Full Stack Web Developer yang fokus membangun aplikasi bisnis.
+Berpengalaman mengembangkan HRIS, Payroll, Attendance GPS, Project Management,
+ERP, dan Dashboard Monitoring menggunakan Laravel, PHP, MySQL, JavaScript,
+Linux dan Git.
+</p>
+</div>
+
+<div class="card bg-base-200 shadow-xl" data-aos="fade-left">
+<div class="card-body">
+<h3 class="card-title">Masalah yang Bisa Saya Bantu Selesaikan</h3>
+<ul class="space-y-3">
+<li>✅ Absensi masih manual</li>
+<li>✅ Payroll masih menggunakan Excel</li>
+<li>✅ Approval lewat WhatsApp</li>
+<li>✅ Data tersebar di banyak tempat</li>
+<li>✅ Sulit membuat laporan realtime</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="container mx-auto px-6 py-20" id="services">
+<h2 class="text-4xl font-bold text-center mb-12">Layanan</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="card bg-base-200 shadow-xl">
+<div class="card-body">
+<h3 class="card-title">HRIS</h3>
+<p>Absensi, cuti, izin, lembur, payroll dan approval workflow.</p>
+</div>
+</div>
+
+<div class="card bg-base-200 shadow-xl">
+<div class="card-body">
+<h3 class="card-title">ERP Custom</h3>
+<p>Sistem sesuai kebutuhan proses bisnis perusahaan.</p>
+</div>
+</div>
+
+<div class="card bg-base-200 shadow-xl">
+<div class="card-body">
+<h3 class="card-title">REST API</h3>
+<p>Integrasi sistem, mobile app dan third-party services.</p>
+</div>
+</div>
+
+<div class="card bg-base-200 shadow-xl">
+<div class="card-body">
+<h3 class="card-title">Dashboard</h3>
+<p>Monitoring data realtime dengan visualisasi modern.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="container mx-auto px-6 py-20" id="projects">
+<h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+
+<div class="space-y-8">
+
+<div class="card lg:card-side bg-base-200 shadow-xl">
+<div class="card-body">
+<h3 class="card-title text-2xl">SmartHRM</h3>
+<p>Sistem HRIS untuk pengelolaan karyawan terpusat.</p>
+<div class="flex gap-2 flex-wrap">
+<div class="badge badge-primary">Laravel</div>
+<div class="badge badge-secondary">MySQL</div>
+<div class="badge badge-accent">FCM</div>
+</div>
+<ul class="mt-4 space-y-2">
+<li>✓ Absensi GPS</li>
+<li>✓ Payroll</li>
+<li>✓ Cuti & Lembur</li>
+<li>✓ Approval Workflow</li>
+</ul>
+</div>
+</div>
+
+<div class="card lg:card-side bg-base-200 shadow-xl">
+<div class="card-body">
+<h3 class="card-title text-2xl">Prodpay</h3>
+<p>Sistem perhitungan upah produksi otomatis berdasarkan data SAP.</p>
+<ul class="mt-4 space-y-2">
+<li>✓ Dashboard Produksi</li>
+<li>✓ Import Excel</li>
+<li>✓ Rekap Bulanan</li>
+<li>✓ Monitoring SAP</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="container mx-auto px-6 py-20">
+<div class="hero bg-primary text-primary-content rounded-3xl">
+<div class="hero-content text-center py-16">
+<div>
+<h2 class="text-5xl font-bold">Mari Diskusikan Project Anda</h2>
+<p class="py-6">Terbuka untuk freelance, remote work, maupun full-time opportunity.</p>
+<a class="btn">Hubungi Saya</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="container mx-auto px-6 py-20" id="contact">
+<h2 class="text-4xl font-bold text-center mb-10">Kontak</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="card bg-base-200">
+<div class="card-body">
+<h3 class="card-title">WhatsApp</h3>
+<p>Diskusi cepat mengenai project.</p>
+</div>
+</div>
+<div class="card bg-base-200">
+<div class="card-body">
+<h3 class="card-title">GitHub</h3>
+<p>Tampilkan repository dan kontribusi Anda.</p>
+</div>
+</div>
+<div class="card bg-base-200">
+<div class="card-body">
+<h3 class="card-title">LinkedIn</h3>
+<p>Bangun personal branding profesional.</p>
+</div>
+</div>
+</div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>

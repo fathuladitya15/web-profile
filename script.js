@@ -1,128 +1,115 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            } else {
-                console.warn(`No element found for target: ${targetId}`);
-            }
-        });
-    });
-
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-    });
-
-    // Form validation and submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic form validation
-            const nameInput = contactForm.querySelector('input[name="name"]');
-            const emailInput = contactForm.querySelector('input[name="email"]');
-            const messageInput = contactForm.querySelector('textarea[name="message"]');
-
-            if (!nameInput.value.trim()) {
-                alert('Silakan masukkan nama Anda');
-                nameInput.focus();
-                return;
-            }
-
-            if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
-                alert('Silakan masukkan email yang valid');
-                emailInput.focus();
-                return;
-            }
-
-            if (!messageInput.value.trim()) {
-                alert('Silakan tulis pesan Anda');
-                messageInput.focus();
-                return;
-            }
-
-            // Simulate form submission
-            alert('Terima kasih! Pesan Anda akan segera kami proses.');
-            contactForm.reset();
-        });
-    }
-
-    // Email validation function
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(email).toLowerCase());
-    }
-
-    // Typing effect for hero section
-    const heroTitle = document.querySelector('.hero-section h1');
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        let i = 0;
-        function typeWriter() {
-            if (i < text.length) {
-                heroTitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        typeWriter();
-    }
+// AOS
+AOS.init({
+    duration: 1000,
+    once: true
 });
 
-$("#kontakForm").submit(function(e) {
-    e.preventDefault();
+// Scroll Top
+const scrollBtn = document.querySelector('.scroll-top');
 
-    $.ajax({
-        url :url_send,
-        type: "POST",
-        data: $(this).serialize(),
-        beforeSend: function() {
-            Swal.fire({
-                title: "Please Wait ... !",
-                html: "Message is being sent <b></b> ",
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                },
-            });
-        },success: function(res) {
-             Swal.fire({
-                icon: 'success',
-                title: 'Sent!',
-                text: 'Your message has been sent successfully!',
-                timer: 3000,
-                showConfirmButton: false,
-                timerProgressBar: true
-                
-            });
-            $('#kontakForm')[0].reset();
-        },error : function(xhr) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Failed!',
-                text:'There was a problem sending your message.',
-                timer: 3000,
-                showConfirmButton: false,
-                timerProgressBar: true
-            });
+window.addEventListener('scroll', () => {
+
+    if(window.scrollY > 300){
+        scrollBtn.classList.add('show');
+    }else{
+        scrollBtn.classList.remove('show');
+    }
+
+});
+
+scrollBtn.addEventListener('click', () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+
+});
+
+// Active Menu
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if(pageYOffset >= sectionTop){
+            current = section.getAttribute("id");
         }
-    })
-})
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+new Swiper(".skillSwiper", {
+
+    loop: true,
+
+    speed: 4000,
+
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+    },
+
+    freeMode: true,
+
+    grabCursor: true,
+
+    slidesPerView: 2,
+
+    spaceBetween: 20,
+
+    breakpoints: {
+
+        576: {
+            slidesPerView: 3
+        },
+
+        768: {
+            slidesPerView: 4
+        },
+
+        992: {
+            slidesPerView: 5
+        },
+
+        1200: {
+            slidesPerView: 6
+        }
+    }
+
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    new Typed('.typing-text', {
+        strings: [
+            'Fullstack Developer',
+            'Laravel Specialist',
+            'API Engineer',
+            'Cloud & VPS Engineer'
+        ],
+        typeSpeed: 80,
+        backSpeed: 40,
+        loop: true
+    });
+
+});
