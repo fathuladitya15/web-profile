@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         const waText = encodeURIComponent(`Halo Fathul, saya ${name} (${email}).\nPerihal: ${subject}\n\nPesan:\n${message}`);
-                        window.open(`https://wa.me/6289657476880?text=${waText}`, '_blank');
+                        window.open(`https://wa.me/6281296281635?text=${waText}`, '_blank');
                     } else if (result.isDenied) {
                         const mailtoLink = `mailto:muhamadfathuladitya15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\n${message}`)}`;
                         window.location.href = mailtoLink;
